@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Jost", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  line-height: 1.6;
+  background-image: url('/shutterstock_1470615731-2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #333;
+}
+
+/* Estilizando o container do formulário */
+#form-container {
+  background-color: #f9f9f9;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+
+/* Banner com efeito */
+.banner {
+  position: relative;
+  height: 60vh;
+  background: url('urlaqui') no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+}
+
+.banner .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.banner-content {
+  position: relative;
+  z-index: 2;
+  animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Estilos da seção de formulário */
+.form-section {
+  padding: 2rem;
+  background: #f4f4f4;
+  text-align: center;
+}
+
+.form-section h2 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  color: #444;
+}
+
+.promo-form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.promo-form label {
+  text-align: left;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.promo-form input,
+.promo-form select {
+  margin-bottom: 1rem;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.promo-form input:focus,
+.promo-form select:focus {
+  border-color: #bb8f01;
+  outline: none;
+}
+
+.promo-form button {
+  padding: 0.7rem;
+  border: none;
+  background: #bb8f01;
+  color: #fff;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.promo-form button:hover {
+  background: #b38900;
+}
+
+.promo-form button:focus {
+  outline: none;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  /* Torna o banner menor para telas pequenas */
+  .banner {
+      height: 40vh;
+  }
+
+  .banner-content h1 {
+      font-size: 1.8rem;
+  }
+
+  .banner-content p {
+      font-size: 1rem;
+  }
+
+  /* Ajusta o formulário */
+  .promo-form {
+      width: 90%;
+      padding: 1rem;
+  }
+
+  .promo-form label {
+      font-size: 1rem;
+  }
+
+  .promo-form input,
+  .promo-form select {
+      font-size: 1rem;
+  }
+
+  .promo-form button {
+      font-size: 0.9rem;
+  }
+}
